@@ -4,12 +4,14 @@ public class Container {
     private double width;
     private double depth;
 
-    private double totalVolumeInCubicFt = 0.0;
+    private double totalVolumeInCubicFt;
 
     public Container(double height, double width, double depth) {
         this.height = height;
         this.width = width;
         this.depth = depth;
+        this.totalVolumeInCubicFt = getVolume();
+
     }
 
     private double getHeight() {
@@ -52,9 +54,11 @@ public class Container {
         this.totalVolumeInCubicFt = totalVolumeInCubicFt;
     }
     public boolean canFit(double volumeInCubicFt){
-        return totalVolumeInCubicFt <= volumeInCubicFt;
+        return totalVolumeInCubicFt >= volumeInCubicFt;
     }
     public double getVolume(){
-        return (totalVolumeInCubicFt = this.getHeight() * this.getVolume() * this.getDepth());
+        this.totalVolumeInCubicFt = this.height * this.width * this.depth;
+        return totalVolumeInCubicFt;
+//        return (this.totalVolumeInCubicFt = this.getHeight() * this.getVolume() * this.getDepth());
     }
 }

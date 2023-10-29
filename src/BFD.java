@@ -9,7 +9,7 @@ public class BFD {
         for (Package p:
              packages) {
             boolean itemPacked = false;
-            double bestContainerSpace = Double.MAX_VALUE;
+            double bestContainerSpace = Integer.MAX_VALUE;
             Container bestContainer = null;
 
             for(Container c : emptyContainers){

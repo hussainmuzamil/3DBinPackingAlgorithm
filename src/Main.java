@@ -1,3 +1,5 @@
+import java.awt.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -18,5 +20,31 @@ public class Main {
 ////                )
 //        BFD.packItems();
 //        }
-    }
+        ArrayList<Container> containers = new ArrayList<>();
+        containers.add(new Container(40,75,35));
+        containers.add(new Container(42,65,40));
+        containers.add(new Container(35,55,50));
+        containers.add(new Container(55,50,55));
+        containers.add(new Container(65,30,60));
+        containers.add(new Container(30,20,80));
+
+        ArrayList<Package> packages  = new ArrayList<>();
+        packages.add(new Package(0.3456887));
+        packages.add(new Package(0.3456887));
+        packages.add(new Package(0.455645347));
+        packages.add(new Package(0.6756887));
+        packages.add(new Package(0.23456887));
+        packages.add(new Package(0.67856887));
+        packages.add(new Package(0.4556887));
+        packages.add(new Package(0.24566887));
+
+      var containers1 =   BFD.packItems(packages,containers);
+
+        for (Container c:
+             containers1) {
+            System.out.println(c);
+        }
+
+
+     }
 }
